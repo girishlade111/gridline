@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-concrete-100 text-ink font-body antialiased;
+  }
+  ::selection {
+    @apply bg-signal text-concrete-50;
+  }
+  :focus-visible {
+    outline: 2px solid #e8490f;
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .city-grid {
+    background-image:
+      linear-gradient(to right, rgba(22, 24, 26, 0.055) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(22, 24, 26, 0.055) 1px, transparent 1px);
+    background-size: 72px 72px;
+  }
+  .display-tight {
+    letter-spacing: -0.03em;
+    line-height: 0.95;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: reveal 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
