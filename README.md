@@ -262,3 +262,7 @@ A `dist/_redirects` file (Netlify-style) is included for hosts that need it.
 ## License
 
 No license file has been specified for this repository yet. Editorial content and imagery belong to their respective authors/sources (photography hotlinked from Pexels under the Pexels license).
+
+---
+
+**Built by Girish Lade** — https://ladestack.in
